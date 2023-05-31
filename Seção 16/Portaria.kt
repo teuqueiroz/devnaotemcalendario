@@ -1,0 +1,4 @@
+class Portaria {
+
+    fun ControleIdade
+}
