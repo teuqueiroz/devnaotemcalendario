@@ -1,4 +1,7 @@
 class Portaria {
+    val Console = Console()
 
-    fun ControleIdade
+    fun controle(){
+        val idade = Console.readInt("Qual a sua idade ? ")
+    }
 }

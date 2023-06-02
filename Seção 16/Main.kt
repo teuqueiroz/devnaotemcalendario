@@ -1,5 +1,3 @@
-fun main(){
-
-
+fun main() {
+    Portaria().controle()
 }
-

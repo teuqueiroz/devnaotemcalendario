@@ -1,18 +1,22 @@
 class Console {
-    fun TratamentoInformação(msg: String): Int? {
-        var retornoIdade: Int? = null
+    fun readInt(msg: String): Int {
+        var retorno: Int? = null
 
         do {
             println(msg)
-            val idade = readLine()
+            val info = readLine()
 
-            if (idade != null && idade != "") {
-                retornoIdade = idade.toIntOrNull()
-            } else {
-                println("Valor inválido !")
-            }
+            if (info != null && info != ""){
+                 retorno = info.toIntOrNull()
 
-        } while (idade == null || idade =< 0)
+                    if(retorno == null || retorno <= 0){
+                        println("Informação inválida.")
+                    }
 
+            }else println("Informação inválida.")
+
+        } while(retorno == null || retorno <= 0)
+
+        return retorno
     }
 }
