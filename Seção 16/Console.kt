@@ -6,17 +6,33 @@ class Console {
             println(msg)
             val info = readLine()
 
-            if (info != null && info != ""){
-                 retorno = info.toIntOrNull()
+            if (info != null && info != "") {
+                retorno = info.toIntOrNull()
 
-                    if(retorno == null || retorno <= 0){
-                        println("Informação inválida.")
-                    }
+                if (retorno == null || retorno <= 0) {
+                    println("Informação inválida.")
+                }
 
-            }else println("Informação inválida.")
+            } else println("Informação inválida.")
 
-        } while(retorno == null || retorno <= 0)
+        } while (retorno == null || retorno <= 0)
 
         return retorno
     }
+
+    fun readString(msg: String): String {
+        var retorno: String? = null
+
+        do {
+            println(msg)
+            val info = readLine()
+
+            if (info != null && info != "") {
+                retorno = info.toString().lowercase()
+
+            } else println("Informação inválida")
+        } while (retorno == null)
+        return retorno
+    }
+
 }
