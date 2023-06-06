@@ -30,7 +30,28 @@ class Console {
             if (info != null && info != "") {
                 retorno = info.toString().lowercase()
 
-            } else println("Informação inválida")
+            } else {
+                println("Informação inválida.")
+            }
+
+        } while (retorno == null || retorno != "comum" || retorno != "premium" || retorno != "luxo")
+        return retorno
+    }
+
+    fun readStringCod(msg: String): String {
+        var retorno: String? = null
+
+        do {
+            println(msg)
+            val info = readLine()
+
+            if (info != null && info != "") {
+                retorno = info.toString().lowercase()
+
+            } else {
+                println("Negado. Convite inválido.")
+            }
+
         } while (retorno == null)
         return retorno
     }
